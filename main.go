@@ -6,8 +6,9 @@ import (
 	"net/http"
 )
 
+const port = 8000
+
 func main() {
-	const port = 8000
 	listenAt := fmt.Sprintf(":%d", port)
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprint(w, "Hello!")
